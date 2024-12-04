@@ -16,7 +16,7 @@ def calculate_similarity(query_vec, reduced_doc_vecs):
     for doc_vec in reduced_doc_vecs:
         doc_norm = np.linalg.norm(doc_vec)
         similarity = np.dot(query_vec, doc_vec) / (query_norm * doc_norm)
-        similarities.append(round(similarity, 2))
+        similarities.append(round(float(similarity), 2))
     return similarities
 
 num_docs = int(input())
